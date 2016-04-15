@@ -17,4 +17,3 @@ Bir Python projesi herhangi bir metin editöründe geliştirilebilir ya da geli�
 ```git clone https://github.com/Pardus-Kurumsal/ahenk.git``` komutu ile projeyi yerel dosyanıza çekin.<br />
 3. ```../git/ahenk/etc/``` altındaki **ahenk** klasöründe bulunan **ahenk.conf** dosyasını pluginfolderpath ve receivefileparam alanların değerlerini sisteminize göre düzenleyin; sonra da **ahenk** klasörünü  ```/etc/``` yolunun altına kopyalayın.
 4. ahenk daemon'u çalıştırmak için  **../git/ahenk/opt/ahenk/** yolundaki **ahenkd.py**'ı ```sudo python3 ahenkd.py start``` komutuyla çalıştırıyoruz.
----
