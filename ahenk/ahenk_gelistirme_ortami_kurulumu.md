@@ -1,4 +1,4 @@
-###Ahenk Gerliştirme Oratmı Kurulumu
+###Ahenk Geliştirme Oratmı Kurulumu
 
 ###Bağımlılıklar <br />
 * **python3.4+:** Güncel linux sürümlerinde hazır olarak gelmektedir.https://www.python.org/downloads/ adresinden indirilip kurulabilir.
