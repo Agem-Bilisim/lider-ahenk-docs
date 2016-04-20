@@ -1,4 +1,4 @@
-###Ahenk Geliştirme Oratmı Kurulumu
+###Ahenk Geliştirme Ortamı Kurulumu
 
 ###Bağımlılıklar <br />
 * **python3.4+:** Güncel linux sürümlerinde hazır olarak gelmektedir.https://www.python.org/downloads/ adresinden indirilip kurulabilir.
