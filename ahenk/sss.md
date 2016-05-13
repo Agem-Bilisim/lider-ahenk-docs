@@ -46,10 +46,17 @@ receivefileparam = /tmp/
 **CONNECTION**
 
 **uid:**Ahenk'in kendisini kaydetmek ve XMPP Sunucusuna bağlanmak için kullandığı biricik id numarasıdır. Bu alan Ahenk tarafından doldurulacaktır.
+
 **password:** XMPP Sunucusuna bağlanırken kullanmak üzere oluşturulan şifredir. Bu alan Ahenk tarafından doldurulacaktır.
+
 **host:** XMPP sunucusu ip adresidir.Aktif XMPP sunucusunun geçerli ve erişilebilir adresi girilmelidir.
+
 **port:** XMPP sunucusuna erişim için kullanılacak port numarasıdır. Port numarası varsayılan değer olarak **5222**'dir. 5222 genelde TLS'i destekleyen yapılandırmalar için  kullanılır. Bu değerin yanısıra standartlaşmış diğer port numaraları da bulunmaktadır. Bu numaraları kullanırken XMPP Sunucunuzun yapılandırma ayarlarına dikkat etmeniz gerekmektedir. Ejabberd XMPP Sunucusu için  ilgili detaya [link üzerinden](https://docs.ejabberd.im/admin/guide/security/) erişebilirsiniz.
+
 **receiverjid:** Lider uygulamasına XMPP Sunucu üzerinden erişmek için gerekli olan kullanıcı adıdır.
+
 **servicename:** XMPP Sunucusunun sağladığı sanal servis adıdır. Ahenk ve Lider hesapları bu servis üzerinde tanımlı olmalıdır.Aktif XMPP sunucusunun geçerli ve erişilebilir servis adı girilmelidir.
+
 **fileserver:** Dosya transfer işlemleri sırasında kullanılmak üzere erişilmesi gerekilen dosya sunucusunun adresi.
+
 **receivefileparam:** Ahenk'e gelen dosyaların kaydedileceği dizin yoludur.
