@@ -7,7 +7,9 @@
 
 Bir Python projesi herhangi bir metin editöründe geliştirilebilir ya da geliştirme kitleri tercih edilebilir. En gelişmiş ve ücretsiz ide'lerden biri olan [pycharm](https://www.jetbrains.com/pycharm/download/#section=linux)'ın community versiyonu yanı sıra [plugin desteğiyle eclipse](http://www.pydev.org/manual_101_install.html) ile de python projesi geliştirilebilir. Ahenk üzerinde sqlite çalıştırmaktadır. Bu ahenk veritabanını içeriğini görüntülemek-düzenlemek için [sqlite studio](http://sqlitestudio.pl/?act=download) gibi veritabanı araçları kullanabilirsiniz.
 
+---
 
+###Pycharm Kullanımı<br />
 
 ---
 
