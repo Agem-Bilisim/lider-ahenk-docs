@@ -12,6 +12,7 @@
 * **slixmpp:** Açık kaynak xmpp python client projesidir. Ahenk için küçük düzenlemeler yapılmış hali https://github.com/volkansahin/slixmpp bu adrestedir. Sistemde ```cython```, ```libidn11``` ve ```libidn11-dev``` paketlerinin olması gerekir. Bunun için ```sudo apt-get install cython libidn11 libidn11-dev``` komutunu çalıştırınız. slixmpp dosyası içinde ```python3 setup.py install``` komutu ile kurulabilir.
 * **paramiko:** ssh protokolü üzerinden dosya transferini sağlamak için gerekli olan bu modül`sudo pip3 install paramiko`
 * **psutil:** Sistem temel bilgilerine erişim için kullanılan psutil `sudo pip3 install psutil` 
+* **cpuinfo:** İşlemci bilgilerine erişim için kullanılan cpuinfo `sudo pip3 install py-cpuinfo` 
 
 
 Bir Python projesi herhangi bir metin editöründe geliştirilebilir ya da geliştirme kitleri tercih edilebilir. En gelişmiş ve ücretsiz ide'lerden biri olan [pycharm](https://www.jetbrains.com/pycharm/download/#section=linux)'ın community versiyonu yanı sıra [plugin desteğiyle eclipse](http://www.pydev.org/manual_101_install.html) ile de python projesi geliştirilebilir. Ahenk üzerinde sqlite çalıştırmaktadır. Bu ahenk veritabanını içeriğini görüntülemek-düzenlemek için [sqlite studio](http://sqlitestudio.pl/?act=download) gibi veritabanı araçları kullanabilirsiniz.
