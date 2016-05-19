@@ -9,7 +9,7 @@
  **libff**'i `sudo apt-get install libffi-dev`
  **libssl**'i `sudo apt-get install libssl-dev`
  terminal komutları ile kurabilirsiniz.
-* **slixmpp:** Açık kaynak xmpp python client projesidir. Ahenk için küçük düzenlemeler yapılmış hali https://github.com/volkansahin/slixmpp bu adrestedir. Sistemde '''cython''', '''libidn11''' ve '''libidn11-dev''' paketlerinin olması gerekir. Bunun için '''sudo apt-get install cython libidn11 libidn11-dev''' komutunu çalıştırınız. slixmpp dosyası içinde ```python3 setup.py install``` komutu ile kurulabilir.
+* **slixmpp:** Açık kaynak xmpp python client projesidir. Ahenk için küçük düzenlemeler yapılmış hali https://github.com/volkansahin/slixmpp bu adrestedir. Sistemde ```cython```, ```libidn11``` ve ```libidn11-dev``` paketlerinin olması gerekir. Bunun için ```sudo apt-get install cython libidn11 libidn11-dev``` komutunu çalıştırınız. slixmpp dosyası içinde ```python3 setup.py install``` komutu ile kurulabilir.
 * **paramiko:** ssh protokolü üzerinden dosya transferini sağlamak için gerekli olan bu modül`sudo pip3 install paramiko`
 * **psutil:** Sistem temel bilgilerine erişim için kullanılan psutil `sudo pip3 install psutil` 
 
