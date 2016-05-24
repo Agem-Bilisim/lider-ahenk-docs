@@ -28,6 +28,8 @@ Ahenk'e plugin geliştirmek için Ahenk Core'u tamamen kurup geliştirdiğiniz e
 
 Yukarda belirtilen bağımlılıkları kurduktan sonra geliştirme ortamı için Pycharm'ı kullanabilirsiniz. [Pycharm](https://www.jetbrains.com/pycharm/download/)'a hızlıca gözatmak için [Quick Start Guide](https://www.jetbrains.com/help/pycharm/5.0/quick-start-guide.html)'a bakabilirsiniz.
 
+**Not:** Ahenk sistem üzerinde çalışırken root hakkı gerektiren operasyonlar yapığı için Pycharm'ı sudo ile çalıştırmak gerekir.
+
 **Projeyi Açmak:** `File->Open->(ahenk_projesinin_yolu)` ile projeyi seçin. Ardından Sol taraftaki dizin ağacından `../ahenk/opt/ahenk` yolundaki (opt altındaki) **ahenk** klasörüne sağ tıklayıp `Mark Directory As-> Sources Root` ile kök dizin seviyesini belirleyin.
 
 **Varsayılan Yorumlayıcıyı Değiştirmek:** `File->Settings` ile gelen ekranda **interpreter** diye arattıktan sonra gelen ekranda **Project Interpreter** select box'undan **python3.4**'ü seçin. Bu ekranda aynı zamanda Python modülleri de kolay bir şekilde kurulabilir. Bunun için Ekrandaki tablonun sağ tarafındaki **+** simgesine tıklayıp module isimlerini aratıp kurabilirsiniz(Eğer bu module kurarken hata alıyorsanız geçerli python versiyonunuzu ve kurmak istediğiniz python kütüphanesinin bağımlılıklarını kontrol ediniz.).
