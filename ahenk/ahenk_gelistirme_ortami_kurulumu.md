@@ -15,11 +15,26 @@
 * **cpuinfo:** İşlemci bilgilerine erişim için kullanılan cpuinfo `sudo pip3 install py-cpuinfo` 
 
 
-Bir Python projesi herhangi bir metin editöründe geliştirilebilir ya da geliştirme kitleri tercih edilebilir. En gelişmiş ve ücretsiz ide'lerden biri olan [pycharm](https://www.jetbrains.com/pycharm/download/#section=linux)'ın community versiyonu yanı sıra [plugin desteğiyle eclipse](http://www.pydev.org/manual_101_install.html) ile de python projesi geliştirilebilir. Ahenk üzerinde sqlite çalıştırmaktadır. Bu ahenk veritabanını içeriğini görüntülemek-düzenlemek için [sqlite studio](http://sqlitestudio.pl/?act=download) gibi veritabanı araçları kullanabilirsiniz.
+Bir Python projesi herhangi bir metin editöründe geliştirilebilir ya da geliştirme kitleri tercih edilebilir. En gelişmiş ve ücretsiz ide'lerden biri olan [pycharm](https://www.jetbrains.com/pycharm/download/)'ın community versiyonu yanı sıra [plugin desteğiyle eclipse](http://www.pydev.org/manual_101_install.html) ile de python projesi geliştirilebilir. Ahenk üzerinde sqlite çalıştırmaktadır. Bu ahenk veritabanını içeriğini görüntülemek-düzenlemek için [sqlite studio](http://sqlitestudio.pl/?act=download) gibi veritabanı araçları kullanabilirsiniz.
 
 * IDE'ler üzerinde çalışırken varsayılan yorumlayıcınızın **python3.4+** olmasına ve ahenkd.py'ı **start** argümanı ile çalıştırdığınıza emin olun.
 
-* Yukardaki paketler Pardus Kurumsal 5 için sıralanmıştır. Bazı paketler işletim sisteminizin dağıtımına göre hali hazırda varolabilir ya da tanımlanmış depolarda olmayabilir.
+* Yukardaki paketler Pardus Kurumsal 5 için sıralanmıştır. Bazı paketler işletim sisteminizin dağıtımına göre hali hazırda varolabilir ya da tanımlanmış depolarda bulunmayabilir.
+
+---
+###Pycharm İçin İpucu
+
+Ahenk'e plugin geliştirmek için Ahenk Core'u tamamen kurup geliştirdiğiniz eklentiyi çekirdeğe entegre etmek zorunda değilsiniz(plugin şablonu üzerinden giderek, Konsoldan belirlenen json verisinin gelidiğini varsayarak eklenti geliştirilebilir); fakat kontrollü bir işleyiş denetimi, Ahenk çekirdeğinin sağladığı servislerin kolayca kullanımı için Ahenk çekirdeğinin kullanılması önerilmektedir.
+
+Yukarda belirtilen bağımlılıkları kurduktan sonra geliştirme ortamı için Pycharm'ı kullanabilirsiniz. [Pycharm](https://www.jetbrains.com/pycharm/download/)'a hızlıca gözatmak için [Quick Start Guide](https://www.jetbrains.com/help/pycharm/5.0/quick-start-guide.html)'a bakabilirsiniz.
+
+**Projeyi Açmak:** `File->Open->(ahenk_projesinin_yolu)` ile projeyi seçin. Ardından Sol taraftaki dizin ağacından `../ahenk/opt/ahenk` yolundaki (opt altındaki) **ahenk** klasörüne sağ tıklayıp `Mark Directory As-> Sources Root` ile kök dizin seviyesini belirleyin.
+
+**Varsayılan Yorumlayıcıyı Değiştirmek:** `File->Settings` ile gelen ekranda **interpreter** diye arattıktan sonra gelen ekranda **Project Interpreter** select box'undan **python3.4**'ü seçin. Bu ekranda aynı zamanda Python modülleri de kolay bir şekilde kurulabilir. Bunun için Ekrandaki tablonun sağ tarafındaki **+** simgesine tıklayıp module isimlerini aratıp kurabilirsiniz(Eğer bu module kurarken hata alıyorsanız geçerli python versiyonunuzu ve kurmak istediğiniz python kütüphanesinin bağımlılıklarını kontrol ediniz.).
+
+**Projenin Debug Yapılandırılması:** `Run->Edit Configurations..` ile açılan ekranın sol üst kısmında **+** ikonu ile yeni bir python konfigurasyonu ekleyelim. Bu konfigurasyona ahenk ismini verdikten sonra **Script** parametresi olarak ahenkd.py'ı gösterin (`/opt/ahenk/ahenkd.py` gibi bir yol olmalı). `ahenkd.py` Ahenk'in başlatıldığı script'tir. Bu script'e **start**, **stop**, **restart**, **status** gibi parametreler geçilebilir. Ahenk'i çalıştırmak için **Edit Configuration** ekranındayken **Script parameters**'e `start` parametresi geçmemiz gerekir. Son olarak projenin yorumlayıcısını **Python interpreter** alanından **python 3.4**'e çekip `Apply->Ok` butonlatına basınız.
+
+Ahenk projesini Shift+F10 ile koşturabilir,Shift+F9 ile debug edebilirsiniz.(Ya da çalıştırmak istediğiniz py'a sağ tıklayıp run ya da debug seçenekleri ile çalıştırabilirsiniz)
 
 ---
 
