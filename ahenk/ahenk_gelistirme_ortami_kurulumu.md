@@ -34,7 +34,7 @@ Yukarda belirtilen bağımlılıkları kurduktan sonra geliştirme ortamı için
 
 **Projenin Debug Yapılandırılması:** `Run->Edit Configurations..` ile açılan ekranın sol üst kısmında **+** ikonu ile yeni bir python konfigurasyonu ekleyelim. Bu konfigurasyona ahenk ismini verdikten sonra **Script** parametresi olarak ahenkd.py'ı gösterin (`/opt/ahenk/ahenkd.py` gibi bir yol olmalı). `ahenkd.py` Ahenk'in başlatıldığı script'tir. Bu script'e **start**, **stop**, **restart**, **status** gibi parametreler geçilebilir. Ahenk'i çalıştırmak için **Edit Configuration** ekranındayken **Script parameters**'e `start` parametresi geçmemiz gerekir. Son olarak projenin yorumlayıcısını **Python interpreter** alanından **python 3.4**'e çekip `Apply->Ok` butonlatına basınız.
 
-Ahenk projesini Shift+F10 ile koşturabilir,Shift+F9 ile debug edebilirsiniz.(Ya da çalıştırmak istediğiniz py'a sağ tıklayıp run ya da debug seçenekleri ile çalıştırabilirsiniz)
+Ahenk projesini **Shift+F10** ile koşturabilir,**Shift+F9** ile debug edebilirsiniz.(Ya da çalıştırmak istediğiniz py'a sağ tıklayıp run ya da debug seçenekleri ile çalıştırabilirsiniz)
 
 ---
 
