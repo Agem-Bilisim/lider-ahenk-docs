@@ -10,6 +10,7 @@
  **libssl**'i `sudo apt-get install libssl-dev`
  terminal komutları ile kurabilirsiniz.
 * **slixmpp:** Açık kaynak xmpp python client projesidir. Ahenk için küçük düzenlemeler yapılmış hali https://github.com/volkansahin/slixmpp bu adrestedir. Sistemde ```cython```, ```libidn11``` ve ```libidn11-dev``` paketlerinin olması gerekir. Bunun için ```sudo apt-get install cython libidn11 libidn11-dev``` komutunu çalıştırınız. slixmpp dosyası içinde ```python3 setup.py install``` komutu ile kurulabilir.
+(slixmpp kurulumu sırasında `error: Could not find required distribution pyasn1` gibi bir hata alırsanız ```python3 setup.py install``` komutunu tekrar çalıştırın.)
 * **paramiko:** ssh protokolü üzerinden dosya transferini sağlamak için gerekli olan bu modül`sudo pip3 install paramiko`
 * **psutil:** Sistem temel bilgilerine erişim için kullanılan psutil `sudo pip3 install psutil` 
 * **cpuinfo:** İşlemci bilgilerine erişim için kullanılan cpuinfo `sudo pip3 install py-cpuinfo` 
