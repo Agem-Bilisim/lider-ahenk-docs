@@ -60,3 +60,6 @@ receivefileparam = /tmp/
 **fileserver:** Dosya transfer işlemleri sırasında kullanılmak üzere erişilmesi gerekilen dosya sunucusunun adresi.
 
 **receivefileparam:** Ahenk'e gelen dosyaların kaydedileceği dizin yoludur.
+
+###Ahenk bir kere register oldu fakat; register bilgilerini silip yeniden register etmek istiyorum. Ne yapmam lazım?
+Ahenk üzerindeki veritabanı kayıtlarını kaldırmak ve register bilgilerini ahenk.conf dosyasından silmek için  `/opt/ahenk/` altında `sudo python3 ahenkd.py clean` komutunu çalıştırmanız yeterlidir. Ahenk bir sonraki açılışında, ilk kez çalışıyormuş gibi registration işlemini başlatacaktır.
