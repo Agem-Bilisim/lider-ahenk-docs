@@ -29,7 +29,7 @@ Ahenk'e plugin geliştirmek için Ahenk Core'u tamamen kurup geliştirdiğiniz e
 
 Yukarda belirtilen bağımlılıkları kurduktan sonra geliştirme ortamı için Pycharm'ı kullanabilirsiniz. [Pycharm](https://www.jetbrains.com/pycharm/download/)'a hızlıca gözatmak için [Quick Start Guide](https://www.jetbrains.com/help/pycharm/5.0/quick-start-guide.html)'a bakabilirsiniz.
 
-**Not:** Ahenk sistem üzerinde çalışırken root hakkı gerektiren operasyonlar yapığı için Pycharm'ı sudo ile çalıştırmak gerekir.
+**Not:** Ahenk sistem üzerinde çalışırken root hakkı gerektiren operasyonlar yapıldığı için Pycharm'ı sudo ile çalıştırmak gerekir. Eğer sudo hakkı olmayan bir kullanıcı ile aşağıdaki yapılandırma ayarlarını yaptıysanız, sudo ile açtığınızda bu ayarların bir kısmı etkin olmayabilir; bu işlemleri bir defaya mahsus tekrarlamanız gerekebilir.
 
 **Projeyi Açmak:** `File->Open->(ahenk_projesinin_yolu)` ile projeyi seçin. Ardından Sol taraftaki dizin ağacından `../ahenk/opt/ahenk` yolundaki (opt altındaki) **ahenk** klasörüne sağ tıklayıp `Mark Directory As-> Sources Root` ile kök dizin seviyesini belirleyin.
 
@@ -45,5 +45,6 @@ Ahenk projesini **Shift+F10** ile koşturabilir,**Shift+F9** ile debug edebilirs
 1. Proje dosyalarını barındıracağınız bir klasör oluşturun.(**git/** gibi ```-mkdir git```)<br />
 2. Oluşturduğumuz git dosyası içinde
 ```git clone https://github.com/Pardus-Kurumsal/ahenk.git``` komutu ile projeyi yerel dosyanıza çekin.<br />
-3. ```../git/ahenk/etc/``` altındaki **ahenk** klasöründe bulunan **ahenk.conf** dosyasını **host**, **port**, **receiverjid**, **pluginfolderpath** ve **receivefileparam** alanların değerlerini sisteminize göre düzenleyin; sonra da **git/ahenk/etc/** dizini altındaki **ahenk** klasörünü  ```/etc/``` yolunun altına kopyalayın.
-4. ahenk daemon'u başlatmak için  **../git/ahenk/opt/ahenk/** yolundaki **ahenkd.py**'ı ```sudo python3 ahenkd.py start``` komutuyla çalıştırıyoruz.
+3. ```../git/ahenk/etc/``` altındaki **ahenk** klasöründe bulunan **ahenk.conf** dosyasını **host**, **port**, **receiverjid**, **pluginfolderpath** ve **receivefileparam** alanların değerlerini sisteminize göre düzenleyin; sonra da **git/ahenk/etc/** dizini altındaki **ahenk** klasörünü  ```/etc/``` yolunun altına kopyalayın.( conf dosyasındaki parametrelerin nelere karşılık geldiğini görmek için [bu linkteki dokümanı](https://github.com/Agem-Bilisim/lider-ahenk-docs/blob/master/ahenk/sss.md) inceleyebilirsiniz.)
+4. **Ahenk** daemon'u başlatmak için  **../git/ahenk/opt/ahenk/** yolundaki **ahenkd.py**'ı ```sudo python3 ahenkd.py start``` komutuyla çalıştırıyoruz.(IDE kullanıyorsak `start` argümanı vererek `ahenkd.py` scriptini çalıştırıyoruz.)
+5. `ahenkd.py` scripti **start**, **status**, **stop**, **restart**, **clean** gibi farklı parametreler alabilir.Eğer politika eklentileri üzerinde çalışıyorsak, politikaların yüklenebilmesi için kullanıcıların hedef makinede(ahenk kurulu) oturum açmaları gerekir. Belirlenen politikalar oturum açılırken **Lider**'den alınıp çalıştırılır. **Ahenk**'in çalıştığı makinenin sürekli oturum açma-kapatma işlemleri ile vakit kaybetmek istemiyorsanız; ```sudo python3 ahenkd.py login user_name``` ile istenilen kullanıcının oturum açmış gibi **Ahenk**'i tetiklemesini sağlayabilirsiniz.
