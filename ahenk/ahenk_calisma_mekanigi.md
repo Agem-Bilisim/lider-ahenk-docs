@@ -2,7 +2,7 @@
 
 ###Event Tetiklemek 
 
-Ahenk [pam](http://tldp.org/HOWTO/User-Authentication-HOWTO/x115.html) gibi modülleri kullanarak sistem üzerindeki gerçekleştirilen kullanıcı girişi-çıkışı, sistemin kapanması vb.. aktiviteleri algılayabilir. Örneğin giriş yapan kullanıcının politikasının lider'den istenmesi için **oturum açma** işleminin farkedilmesi.  Bu ve benzeri işlemler temelde arka planda bir terminal komutu çalıştımaktadır. Eklenti geliştirme sırasında, benzer şekilde event tetiklemek için; ahenk çalıştığı sırada komut satırından ```python3 ahenkd.py [event] [parameters]``` şablonunda çalıştırılabilir. Örneğin ```python3 ahenkd.py login``` volkan gibi ... 
+Ahenk [pam](http://tldp.org/HOWTO/User-Authentication-HOWTO/x115.html) gibi modülleri kullanarak sistem üzerindeki gerçekleştirilen kullanıcı girişi-çıkışı, sistemin kapanması vb.. aktiviteleri algılayabilir. Örneğin giriş yapan kullanıcının politikasının lider'den istenmesi için **oturum açma** işleminin farkedilmesi.  Bu ve benzeri işlemler temelde arka planda bir terminal komutu çalıştımaktadır. Eklenti geliştirme sırasında, benzer şekilde event tetiklemek için; ahenk çalıştığı sırada komut satırından ```python3 ahenkd.py [event] [parameters]``` şablonunda çalıştırılabilir. Örneğin ```python3 ahenkd.py login volkan ``` gibi ... 
 
 
 ---
@@ -16,13 +16,14 @@ Bir ahenk eklentisinin(plugin) dosya yapısı **plugins** dizini altında aşağ
 **myplugin/** <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** main.py<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** policy.py<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** safe.py<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** taskId1.py <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** taskId1.py <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** **api/**<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** _plugin_name_Service.py<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** environmentA1.py<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** environmentA2_.py<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** Default.py<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** environmentA1.* <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** environmentA2_.* <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**L** Default.* <br />
    
 * Bu standart yapıdaki bir eklentinin **taskId1** isimli görevin çalıştırılması için Ahenk çekirdeği **taskId1.py** daki task **handle_task(task,context)** fonksiyonunu tetikler. Bu fonksiyon task işleminin başlangıç noktası olarak varsayılabilir. **handle_task** 2 tane parametre alır. İlk parametre olan **task** eklenti geliştiricisinin lider bileşeninden gönderdiği json iletisidir. Görevin ihtiyaç duyduğu veriler eklentiyi tasarlayanın belirlediği yapıyla json mesajı olarak bu parametre ile değerlendirilebilir.
 
