@@ -6,7 +6,7 @@
 3.1 `/etc/ahenk/ahenk.conf` dosyasında **pluginfolderpath** parametresinde `/opt/ahenk/plugins/` yolunun olduğunu varsayalım
 3.2  Yeni oluşturduğumuz eklentinin adının **sample**, bu eklentinin ahenk kısmının yolunun da `/home/user/git/lider-ahenk-sample-plugin/ahenk-sample/sample` olduğunu varsayalım.
 3.3 `/home/user/git/lider-ahenk-sample-plugin/ahenk-sample/sample` dizinini `/opt/ahenk/plugins/` dizini içine link vermemiz için çalıştırmamız gereken terminal kodu şöyledir:
-`ln -s /home/user/git/lider-ahenk-sample-plugin/ahenk-sample/sample /opt/ahenk/plugins/sample`
+`ln -s /home/user/git/lider-ahenk-sample-plugin/ahenk-sample/sample /opt/ahenk/plugins`
 4. Eklentimizin Console ve Lider kısımlarını tamamlayıp Console'a ve Karaf'a eklentilerimizi eklediysek task veya policy'ler çalıştırıldığında, gönderilen datalar artık eklentinin ilgili py dosyasının handle fonksiyonlarına gelmesi gerekmektedir.
 5. **sample** adlı eklentimizde bulunması gereken py dosyaları şunlardır:</br> **main.py** </br> **policy.py** </br> **command-id.py** </br> **safe.py** 
 6. **policy.py** politika çalıştıran eklentilerde bulunması gerekir. Güncel profiller **login** işlemi sonrasında alınır ve ilgili eklentinin **policy.py** dosyasındaki **handle_policy** fonksiyonu Ahenk çekirdeği tarafından çağırılır ve bu fonksiyon **profile_data** ve **context** diye iki argüman alır.
