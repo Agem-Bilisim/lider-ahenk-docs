@@ -12,6 +12,8 @@ Ahenk kurulu bilgisayarlarda kullanıcılar **LDAP** üzerinden authenticate olu
 
 **EXECUTE_TASK** tipindeki mesajlar ise o anda çalıştırılması gereken görev için kullanılan gereklili parametreleri barındıran mesajdır.
 
+Çalıştırılan her görev ya da Politika Profili sonunda Ahenk, Lidere **RESPONSE** gönderir. Response mesajı ile çalıştırılan görev/politikanın başarı durumu, varsa döndürülen data bu mesaj ile iletilir.
+
 Ahenk bir görev ya da politika çalıştırmayı denediğinde eğer ilgili eklentiyi bulamazsa **MISSING_PLUGIN** tipinde bir mesaj gönderir.
 
 Lider'e **MISSING_PLUGIN** tipinde mesaj eriştiğinde eğer ilgili eklentinin Lider tarafındaki yapılandırma dosyasında bu eklentinin ahenk tarafının deb versiyonuna nasıl erişilebileceği hakkında distro bilgileri tanımlandıysa **INSTALL_PLUGIN** tipinde bir mesaj döndürür.
@@ -78,8 +80,7 @@ _ _ _
 "status":"ALREADY_EXISTS",
 "message":"cn=2559305d-a415-38e7-8498-2dbc458662a7,ou=Uncategorized,dc=mys,dc=pardus,dc=org already exists! Updated its password and database properties with the values submitted.",
 "agentDn":"cn=2559305d-a415-38e7-8498-2dbc458662a7,ou=Uncategorized,dc=mys,dc=pardus,dc=org",
-"timestamp":1465282735658}
-```
+"timestamp":1465282735658}```
 
 
 _ _ _
@@ -250,6 +251,55 @@ _ _ _
 
 _ _ _
 
+###POLICY RESPONSE (A>>>L)
+
+
+**policyVersion**: Çalıştırılan politika versiyonu
+**commandExecutionId**: Polikanın çalıştırılma id'si
+**responseMessage**: Sonuç mesajı(free text)
+**responseCode**:Politikanın çalıştırılma durumuna göre POLICY_ERROR,POLICY_KILLED,POLICY_PROCESSED,POLICY_RECEIVED,POLICY_TIMEOUT,POLICY_WARNING değerlerini alabilir.
+**responseData**: Varsa politika sonucu döndürülmek istenen data.
+**contentType**: Data'yı tanımlayan tip. Bu tipler şimdilik şunlar olabilir: APPLICATION_MS_WORD,APPLICATION_PDF,APPLICATION_VND_MS_EXCEL,IMAGE_JPEG,IMAGE_PNG,TEXT_HTML,TEXT_PLAIN,APPLICATION_JSON
+
+```json
+{  
+   "timestamp":"07-06-2016 03:43",
+   "type":"POLICY_STATUS",
+   "policyVersion":"2551-1",
+   "commandExecutionId":"2502",
+   "responseMessage":"/opt/thunderbird/thunderbird | Unprivileged | Successful, /opt/firefox/firefox | Privileged | Successful, /usr/bin/kate | Unprivileged | Successful, /usr/bin/gedit | Privileged | Successful, ",
+   "responseCode":"POLICY_PROCESSED",
+   "responseData":null,
+   "contentType":null
+}
+```
+
+
+_ _ _
+
+###TASK RESPONSE (A>>>L)
+
+**taskId**: Çalıştırılan görevin id'si
+**responseMessage**: Sonuç mesajı(free text)
+**responseCode**:Görevin çalıştırılma durumuna göre TASK_ERROR,TASK_KILLED,TASK_PROCESSED,TASK_TIMEOUT,TASK_WARNING,TASK_RECEIVED değerlerini alabilir.
+**responseData**: Varsa görev sonucu döndürülmek istenen data.
+**contentType**: Data'yı tanımlayan tip. Bu tipler şimdilik şunlar olabilir: APPLICATION_MS_WORD,APPLICATION_PDF,APPLICATION_VND_MS_EXCEL,IMAGE_JPEG,IMAGE_PNG,TEXT_HTML,TEXT_PLAIN,APPLICATION_JSON
+
+
+```json
+{  
+   "timestamp":"07-06-2016 03:43",
+   "type":"POLICY_STATUS",
+   "taskId":"2502",
+   "responseMessage":"/opt/thunderbird/thunderbird | Unprivileged | Successful, /opt/firefox/firefox | Privileged | Successful, /usr/bin/kate | Unprivileged | Successful, /usr/bin/gedit | Privileged | Successful, ",
+   "responseCode":"POLICY_PROCESSED",
+   "responseData":null,
+   "contentType":null
+}
+```
+
+_ _ _
+
 
 ###MISSING_PLUGIN (A>>>L)
 **pluginName:** Eksik ahenk eklentisinin adı.
@@ -286,7 +336,7 @@ _ _ _
 
 _ _ _
 
-
 **(L>>>A) Liderden Ahenk' e giden mesaj tipleri
+
 (A>>>L) Ahenk'ten Lider'e giden mesaj tipleri**
 
