@@ -222,15 +222,6 @@ _ _ _
          "userOriented":false,
          "policyPlugin":false,
          "xBased":false,
-         "distroProtocol":"SSH",
-         "distroParams":{  
-            "publicKey":null,
-            "port":22,
-            "username":"distro",
-            "host":"repo.liderahenk.org.tr",
-            "path":"/opt/ahenk-distro/network-inventory-1.0.0-SNAPSHOT.deb",
-            "password":"!Distr0"
-         },
          "createDate":1464254876000,
          "modifyDate":1465283994000
       },
