@@ -163,10 +163,6 @@ Aşağıdaki örnekte  **userPolicyProfiles** ve **userPolicyVersion** değerler
             "userOriented":true,
             "policyPlugin":true,
             "xBased":false,
-            "distroProtocol":"HTTP",
-            "distroParams":{  
-               "url":"http://www.agem.com.tr/msb"
-            },
             "createDate":1464254239000,
             "modifyDate":1465203376000
          },
