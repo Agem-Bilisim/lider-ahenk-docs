@@ -342,7 +342,5 @@ _ _ _
 
 _ _ _
 
-**(L>>>A) Liderden Ahenk' e giden mesaj tipleri
-
-(A>>>L) Ahenk'ten Lider'e giden mesaj tipleri**
+**(L>>>A) Liderden Ahenk' e giden mesaj tipleri</br>(A>>>L) Ahenk'ten Lider'e giden mesaj tipleri**
 
