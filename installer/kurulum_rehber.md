@@ -16,23 +16,23 @@ _ _ _
 #####Kolay kurulum uygulamasının genel çalışma mantığı SSH protokolü ile işlem yapılacak makineye bağlanıp gerekli komutları çalıştırmaktır.
 #####Linux işletim sistemlerinde paket kurma, kaldırma, konfigurasyon gibi işlemler çoğunlukla "root" izni ile yapılabilmektedir. Bu nedenle uygulamanın çalıştığı makineden işlem yapılacak makineye "root" olarak SSH bağlantısı kurulmaktadır.
 #####Fakat Debian tabanlı işletim sistemlerinin çoğunda varsayılan ayar olarak, "root" kullanıcısı ile SSH bağlantısı engellenmiştir. Bu sorunu aşmak için ilgili makinelerde SSH konfigurasyonunda PermitRootLogin satırında değişiklik yapılmalıdır. SSH'ı "root"a açmak için:
-- #####SSH konfigurasyon dosyası açılır:
+- SSH konfigurasyon dosyası açılır:
 `sudo nano /etc/ssh/sshd_config`
-- #####Açılan dosyada "Authentication" başlığı altında
+- Açılan dosyada "Authentication" başlığı altında
 `PermitRootLogin without-password`
 #####ifadesinin olduğu satır
 `PermitRootLogin yes`
 #####olarak değiştirilir.
-- ##### Kaydedip çıktıktan sonra SSH servisi baştan başlatılır:
+-  Kaydedip çıktıktan sonra SSH servisi baştan başlatılır:
 `sudo service ssh restart`
-- ##### Daha sonra `ssh root@<IP_ADRESI>` komutuyla yapılan değişiklikler test edilebilir.
+-  Daha sonra `ssh root@<IP_ADRESI>` komutuyla yapılan değişiklikler test edilebilir.
 
 - - -
 
 ## Kurulum Uygulamasının Çalıştırılması
-- #####Sıkıştırılmış olarak indirilen kurulum uygulaması istenilen bir dizine çıkarılır.
-- #####Oluşan "lider-ahenk-installer-linux.gtk.x86_64" klasörünün içine gidilir.
-- #####Bu klasörün içinde "lider-ahenk-installer" isimli dosyaya çift tıklayarak çalıştırılır.
+- Sıkıştırılmış olarak indirilen kurulum uygulaması istenilen bir dizine çıkarılır.
+- Oluşan "lider-ahenk-installer-linux.gtk.x86_64" klasörünün içine gidilir.
+- Bu klasörün içinde "lider-ahenk-installer" isimli dosyaya çift tıklayarak çalıştırılır.
 #####NOT: Eğer kurulum sırasındaki log'ları görmek isterseniz komut satırından aynı klasördeyken
 ##### ```./lider-ahenk-installer``` komutuyla çalıştırabilirsiniz. Çıkabilecek sorunların rahat çözülebilmesi açısından önerilir.
 
@@ -50,10 +50,10 @@ _ _ _
 
 ###1. Lider Bileşenlerinin Kurulumları
 #####Lider bileşenleri sırasıyla:
-- ##### MariaDB veritabanı
-- ##### OpenLDAP sunucusu
-- ##### Ejabberd (XMPP) sunucusu ve
-- ##### Apache Karaf üzerinde koşan, Lider sunucusudur.
+-  MariaDB veritabanı
+-  OpenLDAP sunucusu
+-  Ejabberd (XMPP) sunucusu ve
+-  Apache Karaf üzerinde koşan, Lider sunucusudur.
 #####"LİDER KUR"'a tıkladıktan sonra açılan ilk ekranda hangi bileşenleri kurmak istediğimiz soruluyor.
 ##### Bu rehberde sıfırdan kurulum yaptığımız için hepsini seçiyoruz (varsayılan olarak tüm bileşenler seçili geliyor) ve "Next"'e basıp devam ediyoruz.
 
