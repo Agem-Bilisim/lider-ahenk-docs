@@ -92,7 +92,7 @@ _ _ _
 _ _ _
 
 ###LOGIN (A>>>L)
-**username: **Giriş yapan kullanıcının adı.
+**username:** Giriş yapan kullanıcının adı.
 
 ```json 
 {"type": "LOGIN", 
@@ -103,7 +103,7 @@ _ _ _
 _ _ _
 
 ###LOGOUT (A>>>L)
-**username: **Çıkış yapan kullanıcının adı.
+**username:** Çıkış yapan kullanıcının adı.
 ```json
 {  
    "type":"LOGOUT",
