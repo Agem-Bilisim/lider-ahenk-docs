@@ -22,9 +22,9 @@ _ _ _
 `sudo nano /etc/ssh/sshd_config`
 - Açılan dosyada "Authentication" başlığı altında
 `PermitRootLogin without-password`
-#####ifadesinin olduğu satır
+ifadesinin olduğu satır
 `PermitRootLogin yes`
-#####olarak değiştirilir.
+olarak değiştirilir.
 -  Kaydedip çıktıktan sonra SSH servisi baştan başlatılır:
 `sudo service ssh restart`
 -  Daha sonra `ssh root@<IP_ADRESI>` komutuyla yapılan değişiklikler test edilebilir.
