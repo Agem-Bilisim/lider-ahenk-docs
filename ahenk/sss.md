@@ -29,6 +29,7 @@ password = aaaaa-bbbbb-ccccc-ddd-eeeeeeee
 host = 172.165.8.X
 port = 5222
 receiverjid = lider_sunucu
+receiverresource = Smack
 servicename = agem.com.tr
 fileserver = 
 receivefileparam = /tmp/
@@ -54,6 +55,8 @@ receivefileparam = /tmp/
 **port:** XMPP sunucusuna erişim için kullanılacak port numarasıdır. Port numarası varsayılan değer olarak **5222**'dir. 5222 genelde TLS'i destekleyen yapılandırmalar için  kullanılır. Bu değerin yanısıra standartlaşmış diğer port numaraları da bulunmaktadır. Bu numaraları kullanırken XMPP Sunucunuzun yapılandırma ayarlarına dikkat etmeniz gerekmektedir. Ejabberd XMPP Sunucusu için  ilgili detaya [link üzerinden](https://docs.ejabberd.im/admin/guide/security/) erişebilirsiniz.
 
 **receiverjid:** Lider uygulamasına XMPP Sunucu üzerinden erişmek için gerekli olan kullanıcı adıdır.
+
+**receiverresource:** Lider uygulamasına XMPP Sunucu üzerinden erişmek için gerekli olan [kaynak](https://wiki.xmpp.org/web/Jabber_Resources) adıdır.
 
 **servicename:** XMPP Sunucusunun sağladığı sanal servis adıdır. Ahenk ve Lider hesapları bu servis üzerinde tanımlı olmalıdır.Aktif XMPP sunucusunun geçerli ve erişilebilir servis adı girilmelidir.
 
