@@ -8,9 +8,7 @@
 
 ###2. Kurulum Uygulamasının Ön Gereklilikleri
 ####2.1 SSH Paketleri
-#####Kurulum uygulamasının çalıştığı makine ile kurulumun yapılacağı makine arasındaki bağlantıyı SSH ile kurulmaktadır. Bu nedenle `openssh-server` ve `openssh-client` paketlerinin her iki tarafta da kurulu olduğundan emin olun. Kurulu değilse:
-`sudo apt-get install openssh-client openssh-server`
-#####komutu ile kurabilirsiniz.
+#####Kurulum uygulamasının çalıştığı makine ile kurulumun yapılacağı makine arasındaki bağlantı SSH ile kurulmaktadır. Bu nedenle `ssh` paketlerinin her iki tarafta da kurulu olduğundan emin olun. Kurulu değilse `sudo apt-get install -y ssh` komutu ile kurabilirsiniz.
 
 _ _ _
 
