@@ -1,21 +1,23 @@
 #Lider Ahenk Kurulum Rehberi
 ##Başlarken
+
 ###1. Kurulum Uygulamasının ve Lider Console'un İndirilmesi
 ####1.1 Kurulum uygulamasını ve Lider Console yönetim arayüzünü http://www.agem.com.tr/sanayi adresinden indirebilirsiniz.
-#####NOT: Bu uygulamalar sıkça iyileştirildiği ve yenilendiği için, elinizde bu uygulamalar olsa bile, lütfen kurulumlara başlamadan önce belirtilen adresten tekrar en güncel versiyonu indiriniz.
+
+> NOT: Bu uygulamalar sıkça iyileştirildiği ve yenilendiği için, elinizde bu uygulamalar olsa bile, lütfen kurulumlara başlamadan önce belirtilen adresten tekrar en güncel versiyonu indiriniz.
 
 - - -
 
-###2. Kurulum Uygulamasının Ön Gereklilikleri
-####2.1 SSH Paketleri
-#####Kurulum uygulamasının çalıştığı makine ile kurulumun yapılacağı makine arasındaki bağlantı SSH ile kurulmaktadır. Bu nedenle `ssh` paketlerinin her iki tarafta da kurulu olduğundan emin olun. Kurulu değilse `sudo apt-get install -y ssh` komutu ile kurabilirsiniz.
+### 2. Kurulum Uygulamasının Ön Gereklilikleri
+#### 2.1 SSH Paketleri
+##### Kurulum uygulamasının çalıştığı makine ile kurulumun yapılacağı makine arasındaki bağlantı SSH ile kurulmaktadır. Bu nedenle `ssh` paketlerinin her iki tarafta da kurulu olduğundan emin olun. Kurulu değilse `sudo apt-get install -y ssh` komutu ile kurabilirsiniz.
 
 _ _ _
 
-####2.2 SSH Bağlantısı Root İzni
-#####Kolay kurulum uygulamasının genel çalışma mantığı SSH protokolü ile işlem yapılacak makineye bağlanıp gerekli komutları çalıştırmaktır.
-#####Linux işletim sistemlerinde paket kurma, kaldırma, konfigurasyon gibi işlemler çoğunlukla "root" izni ile yapılabilmektedir. Bu nedenle uygulamanın çalıştığı makineden işlem yapılacak makineye "root" olarak SSH bağlantısı kurulmaktadır.
-#####Fakat Debian tabanlı işletim sistemlerinin çoğunda varsayılan ayar olarak, "root" kullanıcısı ile SSH bağlantısı engellenmiştir. Bu sorunu aşmak için ilgili makinelerde SSH konfigurasyonunda PermitRootLogin satırında değişiklik yapılmalıdır. SSH'ı "root"a açmak için:
+#### 2.2 SSH Bağlantısı Root İzni
+##### Kolay kurulum uygulamasının genel çalışma mantığı SSH protokolü ile işlem yapılacak makineye bağlanıp gerekli komutları çalıştırmaktır.
+##### Linux işletim sistemlerinde paket kurma, kaldırma, konfigurasyon gibi işlemler çoğunlukla "root" izni ile yapılabilmektedir. Bu nedenle uygulamanın çalıştığı makineden işlem yapılacak makineye "root" olarak SSH bağlantısı kurulmaktadır.
+##### Fakat Debian tabanlı işletim sistemlerinin çoğunda varsayılan ayar olarak, "root" kullanıcısı ile SSH bağlantısı engellenmiştir. Bu sorunu aşmak için ilgili makinelerde SSH konfigurasyonunda PermitRootLogin satırında değişiklik yapılmalıdır. SSH'ı "root"a açmak için:
 - SSH konfigurasyon dosyası açılır:
 `sudo nano /etc/ssh/sshd_config`
 - Açılan dosyada "Authentication" başlığı altında
@@ -33,28 +35,28 @@ _ _ _
 - Sıkıştırılmış olarak indirilen kurulum uygulaması istenilen bir dizine çıkarılır.
 - Oluşan "lider-ahenk-installer-linux.gtk.x86_64" klasörünün içine gidilir.
 - Bu klasörün içinde "lider-ahenk-installer" isimli dosyaya çift tıklayarak çalıştırılır.
-#####NOT: Eğer kurulum sırasındaki log'ları görmek isterseniz komut satırından aynı klasördeyken
-##### ```./lider-ahenk-installer``` komutuyla çalıştırabilirsiniz. Çıkabilecek sorunların rahat çözülebilmesi açısından önerilir.
-
+> NOT: Eğer kurulum sırasındaki log'ları görmek isterseniz komut satırından aynı klasördeyken `./lider-ahenk-installer` komutuyla çalıştırabilirsiniz. Çıkabilecek sorunların rahat çözülebilmesi açısından önerilir.
 
 - - -
 
-
 ## Kurulum Süreci
-#####Bu rehberde Lider Ahenk'in sıfırdan kurulum süreci baştan sona kadar anlatılacaktır.
-#####Rehber ekran görüntüleriyle desteklenerek hazırlanmıştır.
-##++**LÜTFEN SADECE EKRAN GÖRÜNTÜLERİNE BAĞLI KALMAYIP YAZILANLARI MUTLAKA OKUYUNUZ..**++
-#####Kurulum uygulaması çalıştırıldıktan sonra açılan ana ekranda "LİDER KUR"'a tıklayarak Lider bileşenlerinin kurulumuna başlıyoruz.
+##### Bu rehberde Lider Ahenk'in sıfırdan kurulum süreci baştan sona kadar anlatılacaktır.
+##### Rehber ekran görüntüleriyle desteklenerek hazırlanmıştır.
+
+> LÜTFEN SADECE EKRAN GÖRÜNTÜLERİNE BAĞLI KALMAYIP YAZILANLARI MUTLAKA OKUYUNUZ
+
+##### Kurulum uygulaması çalıştırıldıktan sonra açılan ana ekranda "LİDER KUR"'a tıklayarak Lider bileşenlerinin kurulumuna başlıyoruz.
 
 ![installer_ana_menu](http://www.agem.com.tr/installer-screenshots/installer_ana_menu.png)
 
-###1. Lider Bileşenlerinin Kurulumları
-#####Lider bileşenleri sırasıyla:
+### 1. Lider Bileşenlerinin Kurulumları
+##### Lider bileşenleri sırasıyla:
 -  MariaDB veritabanı
 -  OpenLDAP sunucusu
 -  Ejabberd (XMPP) sunucusu ve
 -  Apache Karaf üzerinde koşan, Lider sunucusudur.
-#####"LİDER KUR"'a tıkladıktan sonra açılan ilk ekranda hangi bileşenleri kurmak istediğimiz soruluyor.
+
+##### "LİDER KUR"'a tıkladıktan sonra açılan ilk ekranda hangi bileşenleri kurmak istediğimiz soruluyor.
 ##### Bu rehberde sıfırdan kurulum yaptığımız için hepsini seçiyoruz (varsayılan olarak tüm bileşenler seçili geliyor) ve "Next"'e basıp devam ediyoruz.
 
 ![installer_bilesen_secimi](http://www.agem.com.tr/installer-screenshots/installer_bilesen_secimi.png)
@@ -78,8 +80,10 @@ _ _ _
 
 ##### Bileşenleri farklı lokasyonlara kurmak istiyorsak "Bileşen(ler) farklı bilgisayarlara kurulsun (önerilen)" seçeneğini seçip, her birinin IP'sini ilgili alanlara yazıyoruz.
 ##### Hepsi aynı lokasyona kurulacak ise önce yukarıdaki "Bileşen(ler) tek bir bilgisayara kurulsun" seçeneğini seçiyoruz. Eğer yerel bilgisayara kurulacaksa IP girmenize gerek kalmadan devam edebilirsiniz. Hepsi uzak bir makineye kurulacaksa ilgili seçeneği seçip IP'yi giriyoruz.
-##### NOT: IP alanlarının yanındaki kutucuklar SSH bağlantısında hangi port'un kullanılacağını belirtmektedir. Varsayılan SSH ayarlarından farklı bir port kullanıyorsanız doğru numarayı girmelisiniz.
-##### Bu rehberde tüm bileşenler tek bir uzak makineye kurulacaktır. Sayfayı aşağıdaki gibi dolduruyoruz.
+
+> NOT: IP alanlarının yanındaki kutucuklar SSH bağlantısında hangi port'un kullanılacağını belirtmektedir. Varsayılan SSH ayarlarından farklı bir port kullanıyorsanız doğru numarayı girmelisiniz.
+
+Bu rehberde tüm bileşenler tek bir uzak makineye kurulacaktır. Sayfayı aşağıdaki gibi dolduruyoruz.
 
 ![installer_lokasyonlar_completed](http://www.agem.com.tr/installer-screenshots/installer_lokasyonlar_completed.png)
 
@@ -222,8 +226,9 @@ _ _ _
 ![installer_xmpp_status_completed](http://www.agem.com.tr/installer-screenshots/installer_xmpp_status_completed.png)
 
 ##### Ejabberd kurulumu bittikten sonra kurulum uygulaması dışında yapmanız gereken önemli bir adım aşağıda anlatılmıştır. Lütfen bu adımı atlamayınız.
-#### ÖNEMLİ NOT:
-##### Uygulamada Ejabberd kurulumu sırasında, paket kurulumu tamamlandıktan sonra iki adet kullanıcı Ejabberd'a kaydedilmektedir. Ejabberd dağıtımındaki bir bug nedeniyle, bazen bu kullanıcılar kaydedilemese bile, Ejabberd'dan kaydedilmiş gibi sonuç gelmektedir. Bu nedenle kurulum uygulamasında Ejabberd kurulumu başarılı bir şekilde bittikten sonra Ejabberd'ın kurulu olduğu makinede aşağıdaki komutları çalıştırmanız gerekmektedir:
+
+> ÖNEMLİ NOT:
+Uygulamada Ejabberd kurulumu sırasında, paket kurulumu tamamlandıktan sonra iki adet kullanıcı Ejabberd'a kaydedilmektedir. Ejabberd dağıtımındaki bir bug nedeniyle, bazen bu kullanıcılar kaydedilemese bile, Ejabberd'dan kaydedilmiş gibi sonuç gelmektedir. Bu nedenle kurulum uygulamasında Ejabberd kurulumu başarılı bir şekilde bittikten sonra Ejabberd'ın kurulu olduğu makinede aşağıdaki komutları çalıştırmanız gerekmektedir:
 
 ###### Komut yapıları şu şekildedir:
 ###### `sudo /opt/ejabberd-16.02/bin/ejabberdctl register admin {ejabberd_servis_adı} {kaydedilecek_admin_icin_sifre}`
