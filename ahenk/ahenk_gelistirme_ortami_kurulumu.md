@@ -2,6 +2,7 @@
 
 ###Bağımlılıklar ve Bileşenler <br />
 * **git:** Projenin sürüm kontrol ve kaynak kod yönetimi için git'i terminal üzerinde ```sudo apt-get install git``` ile kurabilirsiniz.
+* **depo ekleme:** [Bu adresteki](https://github.com/Pardus-Kurumsal/lider-ahenk-installer/blob/master/ahenk-installer/conf/liderahenk.list) dosyayı source list'inize ekleyip `sudo apt-get update` komutu ile etkin hale getirin.
 * **python3.4+:** Güncel linux sürümlerinde hazır olarak gelmektedir.https://www.python.org/downloads/ adresinden indirilip kurulabilir.
 * **pip3:** Python modüllerini kurmak için gerekli olan bu paketi `sudo apt-get install python3-pip` terminal komutu ile kurulabilir.
 * **dev paketleri:** Python'un genişletilmiş geliştirme paketlerinden
@@ -9,7 +10,7 @@
  **libff**'i `sudo apt-get install libffi-dev`
  **libssl**'i `sudo apt-get install libssl-dev`
  terminal komutları ile kurabilirsiniz.
-* **slixmpp:** Açık kaynak xmpp python client projesidir. Ahenk için küçük düzenlemeler yapılmış hali https://github.com/volkansahin/slixmpp bu adrestedir. Sistemde ```cython```, ```libidn11``` ve ```libidn11-dev``` paketlerinin olması gerekir. Bunun için ```sudo apt-get install cython libidn11 libidn11-dev``` komutunu çalıştırınız. slixmpp dosyası içinde ```python3 setup.py install``` komutu ile kurulabilir.
+* **slixmpp:** `sudo apt-get install slixmpp` komutu ile kurulabilir.
 (slixmpp kurulumu sırasında `error: Could not find required distribution pyasn1` gibi bir hata alırsanız ```python3 setup.py install``` komutunu tekrar çalıştırın.)
 * **paramiko:** ssh protokolü üzerinden dosya transferini sağlamak için gerekli olan bu modül`sudo pip3 install paramiko`
 * **psutil:** Sistem temel bilgilerine erişim için kullanılan psutil `sudo pip3 install psutil` 
