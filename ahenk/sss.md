@@ -60,7 +60,7 @@ receivefileparam = /tmp/
 
 **servicename:** XMPP Sunucusunun sağladığı sanal servis adıdır. Ahenk ve Lider hesapları bu servis üzerinde tanımlı olmalıdır.Aktif XMPP sunucusunun geçerli ve erişilebilir servis adı girilmelidir.
 
-**fileserver:** Dosya transfer işlemleri sırasında kullanılmak üzere erişilmesi gerekilen dosya sunucusunun adresi.
+**fileserver:** Dosya transfer işlemleri sırasında kullanılmak üzere erişilmesi gereken dosya sunucusunun adresi.
 
 **receivefileparam:** Ahenk'e gelen dosyaların kaydedileceği dizin yoludur.
 
