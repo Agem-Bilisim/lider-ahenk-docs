@@ -65,7 +65,7 @@ Lider raporlama altyapısı ile ilgili wiki.
     * Request: http://localhost:8181/lider/report/5951/get
     * Response:
 
-    ```json
+    ```javascript
 {
 "status": "OK"
 "messages": [1]
@@ -82,7 +82,7 @@ Lider raporlama altyapısı ile ilgili wiki.
     * Request: http://localhost:8181/lider/report/14951/get
     * Response:
 
-    ```json
+    ```javascript
 {
 "status": "OK"
 "messages": [1]
