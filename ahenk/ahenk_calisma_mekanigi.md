@@ -2,7 +2,7 @@
 
 ###Event Tetiklemek 
 
-Ahenk [pam](http://tldp.org/HOWTO/User-Authentication-HOWTO/x115.html) gibi modülleri kullanarak sistem üzerindeki gerçekleştirilen kullanıcı girişi-çıkışı, sistemin kapanması vb.. aktiviteleri algılayabilir. Örneğin giriş yapan kullanıcının politikasının lider'den istenmesi için **oturum açma** işleminin farkedilmesi.  Bu ve benzeri işlemler temelde arka planda bir terminal komutu çalıştımaktadır. Eklenti geliştirme sırasında, benzer şekilde event tetiklemek için; ahenk çalıştığı sırada komut satırından ```python3 ahenkd.py [event] [parameters]``` şablonunda çalıştırılabilir. Örneğin ```python3 ahenkd.py login volkan ``` gibi ... 
+Ahenk [pam](http://tldp.org/HOWTO/User-Authentication-HOWTO/x115.html) gibi modülleri kullanarak sistem üzerindeki gerçekleştirilen kullanıcı girişi-çıkışı, sistemin kapanması vb.. aktiviteleri algılayabilir. Örneğin giriş yapan kullanıcının politikasının lider'den istenmesi için **oturum açma** işleminin farkedilmesi.  Bu ve benzeri işlemler temelde arka planda bir terminal komutu çalıştırmaktadır. Eklenti geliştirme sırasında, benzer şekilde event tetiklemek için; ahenk çalıştığı sırada komut satırından ```python3 ahenkd.py [event] [parameters]``` şablonunda çalıştırılabilir. Örneğin ```python3 ahenkd.py login volkan ``` gibi ... 
 
 
 ---
@@ -37,7 +37,7 @@ Bir ahenk eklentisinin(plugin) dosya yapısı **plugins** dizini altında aşağ
 ###Api Yapısı
 
 Bazı Görev ya da Profil operasyonları sistem bileşenleri,türleri ya da versiyonları ile doğrudan ilgilidir. Bu tip bağımlılıklar genellikle bilgisayar mimarilerinden, grafik arayüz bileşenlerinden, kernel versiyonlarından kaynaklanmaktadır. Bu bağımlılık tipleri öngörülemeyecek şekilde değişebilir veya artabilir.Bu noktada hedef bilgisayarlar göz önünde bulundurularak eklenti operasyonlarının işlevselliğini sürdürebilmesi için bağımlılıklara uygun çeşitli çözümler geliştirmek eklenti geliştiricisinin sorumluluğundadır. Bu amaçla geliştiriciden beklenen yapı yukardaki dosya hiyerarşisine bağlı olarak dinamik nesne erişimi sağlayan api mekanizmasıdır. Bir örnekle açıklamak gerekirse; X eklentisinin a işlevi(ekran görüntüsü alma operasyonu gibi) makine tipi ve masaüstü platformuna bağımlılığı bulunur ve her bir ikili bağımlılık için ayrı ayrı ele alınması gerekir.
-Bu amaçla olası hedef makineler için a işlevini implement eden aşağıdaki gibi classlar oluşturulması beklenir.
+Bu amaçla olası hedef makineler için a işlevini gerçekleştiren aşağıdaki gibi sınıflar oluşturulması beklenir.
 * ltsp_kde.py 
 * x2go_kde.py 
 * ltsp_gnome.py 
