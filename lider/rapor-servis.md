@@ -90,11 +90,16 @@ Lider raporlama altyapısı ile ilgili wiki.
 }
     ```
 
-> **Not** Diğer CRUD işlemleri için örnek URL'ler aşağıdaki gibidir: 
+> **Not**: Diğer CRUD işlemleri için örnek URL'ler aşağıdaki gibidir: 
+
 > **URL**: http://localhost:8181/lider/report/{id}/delete **Method**: GET
+
 > **URL**: http://localhost:8181/lider/report/list **Method**: GET
+
 > **URL**: http://localhost:8181/lider/report/update **Method**: POST
+
 > **URL**: http://localhost:8181/lider/report/add **Method**: POST
+
 > **URL**: http://localhost:8181/lider/report/validate **Method**: POST
 
 ### 3. Rapor şablonundan rapor üretimi
