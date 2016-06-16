@@ -48,7 +48,7 @@ Bu amaçla olası hedef makineler için a işlevini gerçekleştiren aşağıdak
 * default_gnome.py 
 * default_gnome.py 
 * default_default.py 
-(varyasyon sayısı bağımlılık sayısına göre artıp azalabilir. Örn: x64 ve x86 mimarisinin eklenmesi)
+(varyasyon sayısı bağımlılık sayısına göre artıp azalabilir. Örn: x64 ve x86 mimari bağımlılığının eklenmesi)
 Bu sınıfları aynı interface i gerçekleyen sınıflar olarak düşünebiliriz.
 
 Son olarak plugin_nameService.py da Ahenk çekirdeğinden alınan bağımlılık tipi bilgisine göre geçerli nesne a işlevini gerçekleştirmek üzere gerekli yerlerde kullanılır.
