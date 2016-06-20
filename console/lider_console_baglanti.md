@@ -42,3 +42,7 @@
 ######Girilen bilgiler test ediliyor ve başarılı olursa karşımıza aşağıdaki gibi bir ekran geliyor.
 
 ![console-check-authentication](http://www.agem.com.tr/console-screenshots/console-check-authentication.png)
+
+######"OK"'a basıp devam ediyoruz ve karşımıza aşağıdaki gibi "Browser Options" ekranı geliyor.
+
+![console-browser](http://www.agem.com.tr/console-screenshots/console-browser.png)
