@@ -45,4 +45,6 @@
 
 ######"OK"'a basıp devam ediyoruz ve karşımıza aşağıdaki gibi "Browser Options" ekranı geliyor.
 
-![console-browser](http://www.agem.com.tr/console-screenshots/console-browser.png)
+![console-browser-options](http://www.agem.com.tr/console-screenshots/console-browser-options.png)
+
+######Bu ekranda önce "Get base DNs from Root DSE" check'ini kaldırıyoruz ve "Fetch Base DNs" butonuna basıyoruz.
