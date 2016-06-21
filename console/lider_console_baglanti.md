@@ -48,3 +48,17 @@
 ![console-browser-options](http://www.agem.com.tr/console-screenshots/console-browser-options.png)
 
 ######Bu ekranda önce "Get base DNs from Root DSE" check'ini kaldırıyoruz ve "Fetch Base DNs" butonuna basıyoruz.
+######Karşımıza aşağıdaki gibi bir diyalog çıkıyor ve bulduğu "Base DN"'i gösteriyor.
+
+![console-fetch-base-dns](http://www.agem.com.tr/console-screenshots/console-fetch-base-dns.png)
+
+######"OK"'a basıp devam ediyoruz.
+######Eğer aşağıdaki gibi "Base DN" alanı istediğimiz değerle dolmazsa, istediğimiz değeri "Fetch Base DNs" butonunun altındaki ok tuşuna bastıktan sonra seçebiliriz.
+
+![console-browser-options-completed](http://www.agem.com.tr/console-screenshots/console-browser-options-completed.png)
+
+######Bu işlemden sonra "Finish" tuşuna basıyoruz ve bağlantımız aşağıdaki gibi oluşuyor ve bağlanıyor. Otomatik olarak bağlanmazsa bağlantının üzerine çift tıklayarak bağlanabilirsiniz.
+
+![console-connected](http://www.agem.com.tr/console-screenshots/console-connected.png)
+
+
