@@ -10,8 +10,7 @@
  **libff**'i `sudo apt-get install libffi-dev`
  **libssl**'i `sudo apt-get install libssl-dev`
  terminal komutları ile kurabilirsiniz.
-* **slixmpp:** `sudo apt-get install slixmpp` komutu ile kurulabilir.
-(slixmpp kurulumu sırasında `error: Could not find required distribution pyasn1` gibi bir hata alırsanız ```python3 setup.py install``` komutunu tekrar çalıştırın.)
+* **sleekmpp:** `sudo apt-get install python3-sleekxmpp` komutu ile kurulabilir.
 * **paramiko:** ssh protokolü üzerinden dosya transferini sağlamak için gerekli olan bu modül`sudo pip3 install paramiko`
 * **psutil:** Sistem temel bilgilerine erişim için kullanılan psutil `sudo pip3 install psutil` 
 * **cpuinfo:** İşlemci bilgilerine erişim için kullanılan cpuinfo `sudo pip3 install py-cpuinfo` 
