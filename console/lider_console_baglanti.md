@@ -57,7 +57,7 @@
 
 ![console-browser-options-completed](http://www.agem.com.tr/console-screenshots/console-browser-options-completed.png)
 
-######Bu işlemden sonra "Finish" tuşuna basıyoruz ve bağlantımız aşağıdaki gibi oluşuyor ve bağlanıyor. Otomatik olarak bağlanmazsa bağlantının üzerine çift tıklayarak bağlanabilirsiniz.
+######Bu işlemden sonra "Finish" tuşuna basıyoruz ve bağlantımız aşağıdaki gibi oluşuyor ve otomatik olarak açılıyor. Otomatik olarak bağlanmazsa bağlantının üzerine çift tıklayarak bağlanabilirsiniz.
 
 ![console-connected](http://www.agem.com.tr/console-screenshots/console-connected.png)
 
