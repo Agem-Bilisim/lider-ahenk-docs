@@ -59,6 +59,6 @@
 
 ######Bu işlemden sonra "Finish" butonuna tıkladıktan sonra bağlantımız aşağıdaki gibi oluşuyor ve otomatik olarak açılıyor. Otomatik olarak bağlanmazsa bağlantının üzerine çift tıklayarak bağlanabilirsiniz.
 
-![console-connected](http://www.agem.com.tr/console-screenshots/console-connected.png)
+  ![console-connected](http://www.agem.com.tr/console-screenshots/console-connected.png)
 
 
