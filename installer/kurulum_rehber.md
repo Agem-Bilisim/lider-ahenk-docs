@@ -148,7 +148,7 @@ Bu rehberde tüm bileşenler tek bir uzak makineye kurulacaktır. Sayfayı aşa�
 ##### "Next"'e basarak devam ediyoruz ve LDAP kurulumuna geçiyoruz.
 
 #### 1.2 OpenLDAP Kurulumu
-##### OpenLDAP kurulumuna başlarken karşımıza erişim bilgilerini gireceğimiz sayfa karşımıza çıkıyor.
+##### OpenLDAP kurulumuna başlarken karşımıza erişim bilgilerini gireceğimiz sayfa çıkıyor.
 
 ![installer_ldap_erisim](http://www.agem.com.tr/installer-screenshots/installer_ldap_erisim.png)
 
