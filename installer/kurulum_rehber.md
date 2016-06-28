@@ -190,7 +190,7 @@ Bu rehberde tüm bileşenler tek bir uzak makineye kurulacaktır. Sayfayı aşa�
 ##### OpenLDAP kurulumu bittikten sonra "Next"'e basarak bir sonraki bileşen olan Ejabberd kurulumuna geçiyoruz.
 
 #### 1.3 Ejabberd Kurulumu
-##### Ejabberd kurulumuna başlarken karşımıza erişim bilgilerini gireceğimiz sayfa karşımıza çıkıyor.
+##### Ejabberd kurulumuna başlarken karşımıza erişim bilgilerini gireceğimiz sayfa çıkıyor.
 
 ![installer_xmpp_erisim](http://www.agem.com.tr/installer-screenshots/installer_xmpp_erisim.png)
 
