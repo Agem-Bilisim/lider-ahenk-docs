@@ -245,7 +245,7 @@ Uygulamada Ejabberd kurulumu sırasında, paket kurulumu tamamlandıktan sonra i
 ##### Yukarıdaki notta anlatılanları yaptıktan sonra "Next"' tuşuna basarak Lider sunucu kurulumuna geçiyoruz.
 
 ##### 1.4 Lider Sunucu Kurulumu
-##### Lider sunucu kurulumuna başlarken karşımıza erişim bilgilerini gireceğimiz sayfa karşımıza çıkıyor.
+##### Lider sunucu kurulumuna başlarken karşımıza erişim bilgilerini gireceğimiz sayfa çıkıyor.
 
 ![installer_lider_erisim](http://www.agem.com.tr/installer-screenshots/installer_lider_erisim.png)
 
