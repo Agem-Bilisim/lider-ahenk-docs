@@ -199,7 +199,7 @@ Bu rehberde tüm bileşenler tek bir uzak makineye kurulacaktır. Sayfayı aşa�
 
 ![installer_xmpp_kur_yontem](http://www.agem.com.tr/installer-screenshots/installer_xmpp_kur_yontem.png)
 
-##### Bu rehberde hazır gelen paketlerle kurulum yaptığımız için herhangi birşey yapmak "Next"'e basıp bir sonraki sayfaya geçiyoruz.
+##### Bu rehberde hazır gelen paketlerle kurulum yaptığımız için herhangi bir şey yapmaya gerek kalmaksızın "Next"'e tıklayıp bir sonraki sayfaya geçiyoruz.
 ##### Karşımıza Ejabberd'ın konfigurasyon parametrelerini gireceğimiz sayfa çıkıyor.
 
 ![installer_xmpp_conf](http://www.agem.com.tr/installer-screenshots/installer_xmpp_conf.png)
