@@ -114,31 +114,54 @@ Lider raporlama altyapısı ile ilgili wiki.
 
 ### 2. Rapor Şablonları ile İlgili İşlemler
 
-TODO
+### Şablonları Listeleme:
+
+* Request: http://localhost:8181/lider/template/list
+* Response:
+
+    ```json
+{
+	"status": "OK",
+	"messages": ["Records listed."],
+	"resultMap": {
+		"templates": "[{\"id\":52701,\"name\":\"Çalıştırılan Görevler\",\"description\":\"Anlık Olarak, Sisteme Bağlı Bulunan Tüm Kullanıcılara Ait Bilgiler İçeren Rapor.\",\"query\":\"SELECT a.id, a.jid, us.username, us.createDate, a.ipAddresses, a.dn   FROM UserSessionImpl us INNER JOIN us.agent a WHERE us.sessionEvent = 1 \\tAND NOT EXISTS (select 1 from UserSessionImpl logout where logout.sessionEvent = 2 and logout.agent = us.agent  \\t\\t\\tand logout.username = us.username and logout.createDate > us.createDate) ORDER BY us.createDate, us.username\",\"templateParams\":[],\"templateColumns\":[{\"id\":118453,\"name\":\"Sıra No.\",\"columnOrder\":1,\"createDate\":1468853068000},{\"id\":55803,\"name\":\"Görev tarihi\",\"columnOrder\":4,\"createDate\":1466521725000},{\"id\":55801,\"name\":\"Başarılı olanlar\",\"columnOrder\":5,\"createDate\":1466521725000},{\"id\":118452,\"name\":\"IP Adresleri\",\"columnOrder\":6,\"createDate\":1468853068000},{\"id\":70901,\"name\":\"Başarısız olanlar\",\"columnOrder\":7,\"createDate\":1467115539000}],\"createDate\":1466406569000,\"modifyDate\":1468853068000},{\"id\":67201,\"name\":\"Wake-on-LAN\",\"description\":\"Uyandırılan ya da Kapatılan Bilgisayarlar Hakkında Detaylı Rapor\",\"query\":\"SELECT cer.responseMessage, t.createDate, p.name FROM CommandImpl c LEFT JOIN c.commandExecutions ce INNER JOIN ce.commandExecutionResults cer INNER JOIN c.task t INNER JOIN t.plugin p WHERE p.name = 'wol' AND (t.commandClsId = 'WAKE-MACHINE' OR t.commandClsId = 'SHUT-DOWN-MACHINE') AND t.createDate BETWEEN :startDate AND :endDate\",\"templateParams\":[{\"id\":69401,\"key\":\"startDate\",\"label\":\"start\",\"type\":\"DATE\",\"defaultValue\":null,\"mandatory\":true,\"createDate\":1467103363000},{\"id\":69402,\"key\":\"endDate\",\"label\":\"end\",\"type\":\"DATE\",\"defaultValue\":null,\"mandatory\":true,\"createDate\":1467103363000}],\"templateColumns\":[{\"id\":69051,\"name\":\"Sonuç\",\"columnOrder\":1,\"createDate\":1467097434000}],\"createDate\":1467035294000,\"modifyDate\":1468565343000},{\"id\":69851,\"name\":\"Çevrimiçi Kullanıcılar\",\"description\":\"Anlık olarak sisteme bağlı olan tüm kullanıcılara ait bilgiler içerir.\",\"query\":\"SELECT a.id, a.jid, us.username, us.createDate, a.ipAddresses, a.dn   FROM UserSessionImpl us INNER JOIN us.agent a WHERE us.sessionEvent = 1 \\tAND NOT EXISTS (select 1 from UserSessionImpl logout where logout.sessionEvent = 2 and logout.agent = us.agent and logout.username = us.username and logout.createDate > us.createDate) ORDER BY us.createDate, us.username\",\"templateParams\":[],\"templateColumns\":[{\"id\":69901,\"name\":\"Kullanıcı Adı\",\"columnOrder\":3,\"createDate\":1467106380000},{\"id\":69902,\"name\":\"Sisteme Giriş Tarihi\",\"columnOrder\":4,\"createDate\":1467106380000},{\"id\":69903,\"name\":\"IP Adresleri\",\"columnOrder\":5,\"createDate\":1467106380000},{\"id\":69904,\"name\":\"DN\",\"columnOrder\":6,\"createDate\":1467106380000}],\"createDate\":1467106380000,\"modifyDate\":null},{\"id\":78951,\"name\":\"Ahenk Log Kayıtları\",\"description\":\"Ahenk kurulu bilgisayarlardan toplanan log kayıtları\",\"query\":\"SELECT s.fromHost as fromhost,s.eventUser as eventuser, s.eventSource as eventsource,s.eventLogType as eventlogtype , s.genericFileName as genericfilename, s.message as message, s.receivedAt as receivedat, s.sysLogTag as syslogtag FROM SystemEventsImpl s WHERE s.fromHost LIKE :fromhostparam ORDER BY s.deviceReportedTime DESC\",\"templateParams\":[{\"id\":79001,\"key\":\"fromhostparam\",\"label\":\"Makina İsmi\",\"type\":\"STRING\",\"defaultValue\":null,\"mandatory\":false,\"createDate\":1467277994000}],\"templateColumns\":[{\"id\":79051,\"name\":\"From Host\",\"columnOrder\":1,\"createDate\":1467277994000},{\"id\":79052,\"name\":\"Event User\",\"columnOrder\":2,\"createDate\":1467277994000},{\"id\":79053,\"name\":\"Event Source\",\"columnOrder\":3,\"createDate\":1467277994000},{\"id\":79054,\"name\":\"Event Log Type\",\"columnOrder\":4,\"createDate\":1467277994000},{\"id\":79055,\"name\":\"Generic File Name\",\"columnOrder\":5,\"createDate\":1467277994000},{\"id\":79056,\"name\":\"Message\",\"columnOrder\":6,\"createDate\":1467277994000},{\"id\":79057,\"name\":\"Received At\",\"columnOrder\":7,\"createDate\":1467277994000},{\"id\":79058,\"name\":\"Sys Log Tag\",\"columnOrder\":8,\"createDate\":1467277994000}],\"createDate\":1467277994000,\"modifyDate\":null}]"
+	}
+}
+    ```
 
 ### 3. Rapor Tanımları ile İlgili İşlemler
 
 #### Tanımları Listeleme:
 
-    * Request: http://localhost:8181/lider/view/list
-    * Response:
+* Request: http://localhost:8181/lider/view/list
+* Response:
 
-### Tanımdan Rapor Çıktısı Oluşturma:
+    ```json
+{
+	"status": "OK",
+	"messages": ["Records listed."],
+	"resultMap": {
+		"views": "[{\"id\":79151,\"template\":{\"id\":78951,\"name\":\"Ahenk Log Kayıtları\",\"description\":\"Ahenk kurulu bilgisayarlardan toplanan log kayıtları\",\"query\":\"SELECT s.fromHost as fromhost,s.eventUser as eventuser, s.eventSource as eventsource,s.eventLogType as eventlogtype , s.genericFileName as genericfilename, s.message as message, s.receivedAt as receivedat, s.sysLogTag as syslogtag FROM SystemEventsImpl s WHERE s.fromHost LIKE :fromhostparam ORDER BY s.deviceReportedTime DESC\",\"templateParams\":[{\"id\":79001,\"key\":\"fromhostparam\",\"label\":\"Makina İsmi\",\"type\":\"STRING\",\"defaultValue\":null,\"mandatory\":false,\"createDate\":1467277994000}],\"templateColumns\":[{\"id\":79051,\"name\":\"From Host\",\"columnOrder\":1,\"createDate\":1467277994000},{\"id\":79052,\"name\":\"Event User\",\"columnOrder\":2,\"createDate\":1467277994000},{\"id\":79053,\"name\":\"Event Source\",\"columnOrder\":3,\"createDate\":1467277994000},{\"id\":79054,\"name\":\"Event Log Type\",\"columnOrder\":4,\"createDate\":1467277994000},{\"id\":79055,\"name\":\"Generic File Name\",\"columnOrder\":5,\"createDate\":1467277994000},{\"id\":79056,\"name\":\"Message\",\"columnOrder\":6,\"createDate\":1467277994000},{\"id\":79057,\"name\":\"Received At\",\"columnOrder\":7,\"createDate\":1467277994000},{\"id\":79058,\"name\":\"Sys Log Tag\",\"columnOrder\":8,\"createDate\":1467277994000}],\"createDate\":1467277994000,\"modifyDate\":null},\"name\":\"Ahenk Rsyslog\",\"description\":\"emre-test\",\"type\":\"TABLE\",\"viewParams\":[{\"id\":79201,\"referencedParam\":{\"id\":79001,\"key\":\"fromhostparam\",\"label\":\"Makina İsmi\",\"type\":\"STRING\",\"defaultValue\":null,\"mandatory\":false,\"createDate\":1467277994000},\"label\":\"Makina İsmi\",\"value\":\"Cemre\",\"createDate\":1467278229000}],\"viewColumns\":[{\"id\":79251,\"referencedCol\":{\"id\":79056,\"name\":\"Message\",\"columnOrder\":6,\"createDate\":1467277994000},\"type\":\"VALUE_FIELD\",\"legend\":\"Mesaj\",\"width\":100,\"createDate\":1467278229000}],\"createDate\":1467278229000,\"modifyDate\":null}]"
+	}
+}
+    ```
 
-    * Request: http://localhost:8181/lider/view/generate
-    
-```json
+#### Tanımdan Rapor Çıktısı Oluşturma:
+
+* Request: http://localhost:8181/lider/view/generate
+
+    ```json
 {
   "viewId": 75102,
   "paramValues": {
       "startDate":"2016-06-30 15:16:17", "endDate":"2016-07-01 15:16:17"
    }
 }
-```
+    ```
     
-    * Response:
+* Response:
 
-```json
+    ```json
 {
 	"status": "OK",
 	"messages": ["Record retrieved."],
@@ -160,4 +183,8 @@ TODO
 		"type": "TABLE"
 	}
 }
-```
+    ```
+
+#### Kaynak Kod
+
+- [Rapor servis için Controller sınıfı](https://github.com/Pardus-Kurumsal/lider/blob/master/lider-web/src/main/java/tr/org/liderahenk/web/controller/ReportController.java)
