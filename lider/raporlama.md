@@ -1,10 +1,6 @@
-# Lider Rapor Servis
+# Raporlama altyapısı
 
-Lider raporlama altyapısı ile ilgili wiki.
-
-> **İpucu**: Tüm örneklerde, request header'ında **username:emre** ve **password:12345** değerlerinin gönderildiği varsayılacaktır.
-
-### 1. Veritabanı yapısı
+### Veritabanı yapısı
 
 > **Not**: Veritabanı sunucusu bağlantı bilgileri aşağıdaki gibidir:
 > `mysql -h 192.168.1.41 -uroot -pqwert123`
@@ -112,7 +108,7 @@ Lider raporlama altyapısı ile ilgili wiki.
 +-----------------------+---------------+------+-----+---------+-------+
 ```
 
-### 2. Rapor Şablonları ile İlgili İşlemler
+### Rapor Şablonları ile İlgili İşlemler
 
 ### Şablonları Listeleme:
 
