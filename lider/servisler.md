@@ -71,3 +71,11 @@ veritabanında saklanmakta ve Ahenk'in LDAP ağacı üzerinde (Uncategorized alt
 bu servis ile tanımlanmış varsayılan süreçtir ve Karaf üzerinde kayıt sürecini ele alan başka bir servis bulunmadığında devreye
 girmektedir. Dolayısıyla IRegistrationSubscriber arayüzünü gerçekleştiren herhangi bir sınıf (servis) oluşturularak kayıt süreci
 esnek bir şekilde ele alınabilmektedir.
+
+### PluginDbServiceImpl.java
+
+Eklentiler tarafından kullanılmak üzere hazırlanılmış, veritabanı CRUD işlemlerini sunan bir servistir. Arama, kaydetme, güncelleme ve silme gibi metotları sunmaktan sorumludur.
+
+### MailServiceImpl.java
+
+Lider'den ve eklentilerinden e-posta göndermek için kullanılabilen OSGI servisidir. Örneğin belirli aralıklarla rapor alarmları sorgulandıktan sonra tanımlı eşik değer geçildiğinde bu servisin e-posta gönderme metodu aracılığıyla e-posta gönderilebilir.
