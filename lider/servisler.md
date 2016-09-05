@@ -10,7 +10,7 @@ Lider Ahenk süreçlerinde önemli rol oynayan bazı OSGI servislerini listeleme
 
 ### ServiceRegistryImpl.java
 
-Tüm eklentiler ve bazı Lider demetleri tarafından sunulan ve görev (task) işletilme esnasında kullanılan sınıfların 
+Tüm eklentiler ve bazı Lider modülleri tarafından sunulan ve görev (task) işletilme esnasında kullanılan sınıfların 
 bir liste halinde tutulduğu servistir. Söz konusu sınıflar ICommand arayüzünü gerçekleştiren sınıflardan oluşmaktadır.
 ServiceRegistry servisi Karaf'a yeni bir eklenti yüklenmesi veya varolan bir eklentinin çıkarılması durumunda kendi ICommand 
 listesini güncelleyecek şekilde, sistemi her zaman dinler durumda çalışmaktadır. Karaf'ta varolan ICommand sınıflarının
