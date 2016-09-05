@@ -75,3 +75,28 @@ bulup Ahenk'e döndüren politika yöneticisi bu modülde yer almaktadır.
 
 ### lider-report-impl
 
+Lider'de varsayılan olarak tanımlı rapor şablonları bu modül üzerinden sunulmaktadır. Bununla birlikte modülün bir diğer görevi, eklentilerden servis olarak sunulan diğer rapor şablonlarını izlemek ve değişiklikleri veritabanına yansıtmaktır.
+
+### lider-taskmanager-impl
+
+Ahenk üzerinde çalıştırılacak görevleri ilgili Ahenk'lere göndermek ve Ahenk'te çalıştırılan görevlere ait sonuç mesajları
+dinleyip veritabanındaki ilgili kayıtları oluşturmak bu modüldeki görev yöneticisinin sorumluluğundadır. Buna ilaveten ileri tarihli görevleri de veritabanını belirli aralıklarla kontrol ederek tespit edip, çalıştırılma zamanı gelmiş olanları
+çalıştırır.
+
+### lider-web
+
+RESTful web servisi oluşan kontrolör sınıfları içermektedir. Lider uygulamasına HTTP üzerinden giriş noktası burasıdır. Lider Arayüz'den gelen HTTP istemleri bu modül tarafından karşılanıp ilgili diğer modüllere iletilir ve ilgili modül istemi
+işlettikten sonra cevabı da bu web modülü üzerinden JSON formatında Lider Arayüz'e döndürülür.
+
+### lider-rest-impl
+
+Lider Arayüz'den gelen HTTP istemlerinin ele alındığı sınıfları (request processor) içerir. Söz konusu sınıflar kapsamına göre (task, profile, report, policy gibi) birbirlerinden ayrılmıştır. Genellikle bulundukları kapsama göre veritabanı işlemlerini gerçekleştirmek, LDAP veya XMPP istemcisini kullanmak gibi çeşitli işlevlere sahiplerdir.
+
+### lider-service-impl
+
+HTTP istemlerine ait (request, response, context gibi) her türlü Bean sınıfı ve bu sınıfları oluşturmakta kullanılan Factory sınıfları bu modülde tanımlanmıştır. Diğer modüller burada tanımlı servisleri kullanarak gelen istemleri işleyip sonuç döndürebilir.
+
+### lider-router-impl
+
+Lider modüllerinde ve eklentilerde tanımlı görev (task) işleme amacıyla geliştirilmiş servisleri izleyen ve yeni servis tanımlandıkça yada varolan kaldırıldığında üzerindeki servis listesini güncelleyen modüldür. Görev işletimi sırasında, göreve ait sınıfın tetiklenmesi için bu listeden faydalanılır. Yine, benzer şekilde, Ahenk'ten gelen görev sonucuna göre 
+ilgili sınıfın tetiklenmesi için de aynı liste kullanılır.
