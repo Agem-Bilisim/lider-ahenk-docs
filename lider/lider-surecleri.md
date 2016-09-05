@@ -17,7 +17,7 @@ Varsayılan kayıt sürecinde, Lider yeni Ahenk'ler için LDAP ağacında Uncate
 da IP adresi, MAC adresi ile birlikte disk, bellek, işlemci, işletim sistemi bilgilerini kaydeder. Bununla birlikte söz konusu
 kayıt sürecini ele alan servis sadece bir Java arayüzünü gerçekleştiren bir sınıftır dolayısıyla ilgili arayüzü gerçekleştirmiş 
 herhanagi bir sınıf Karaf'a yüklenerek kayıt sürecinde farklı bilgilerin toplanması veya LDAP ağacında farklı şekilde yerleştirme
-yapılması mümkündür. Bu bağlamda örnek bir de kayıt demeti geliştirilmiş, bu demete göre kayıt sırasında gelen MAC adresine göre
+yapılması mümkündür. Bu bağlamda örnek bir de kayıt modülü geliştirilmiş, bu modüle göre kayıt sırasında gelen MAC adresine göre
 önceden hazırlanmış bir CSV dosyasından ilgili Ahenk'in ağaçta nereye yerleştirileceğine karar verilmiş ve devamında Ahenk'e gönderilen
 bir betik çalıştırılarak fazladan bilgi toplanması sağlanmıştır.
 
