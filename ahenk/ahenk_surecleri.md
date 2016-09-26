@@ -48,9 +48,9 @@ Ahenk'in çalışmasından farklı olarak ilk defa çalışmada registration iş
 
 Ahenk çalıştıran bilgisayarda bir kullanıcı ilk defa oturum açtığında kullanıcı sözleşmesini kabul etmesi beklenir. Yapılandırma dosyasında tanımlanmış bekleme süresinde olumlu cevap verilmezse kullanıcı oturumu kapatılır. Kullanıcı sözleşmeyi kabul edene kadar bu süreç devam eder. Eğer Lider yapılandırmasında herhangi bir sözleşme tanımlanmadıysa varsayılan Ahenk Sözleşmesi metni kullanıcıya gösteirilir. Sözleşme metinleri her Ahenk servisi başlatıldığında Lider'den istenilir. Bir öncekinden farklı bir sözleşme Lider'den gönderildiğinde, kullanıcı eski sözleşmeyi kabul etmiş olsa bile yeni sözleme bir sonraki oturum açma sırasında tekrar sorulur.
 
-##Görev Göderilmesi
+##Görev Gönderilmesi
 
-Görev tipinde bir mesaj messenger servisine geldiğinde, event manager servisi kullanılarak execution servisinde tanımlı task execution kısmına mesaj parametresi ile gönderilir. Burada görevin json mesajı bir nesneye dönüştürülür ve veritabanına kaydedilir.Bu sırada görevin çalıştıracak eklentinin yüklü olup olmadığı kontrol edilir. Eğer yüklü değil ise Lider'e ilgili eklentinin eksik olduğuna dair bir mesaj gönderilir ve eklenti kurulana kadar görev saklanır. Eklenti ile ilgili kurulum bilgileri geldiğinde eklenti paketi uzaktan alınıp kurulur ve Ahenk servisine yüklenir. Saklanan görev aktif hale getirilir. Bu bir zamanlı görev ise scheduler servisine gönderilir; değilse plugin manager servisine gönderilerek çalıştırılır.
+Görev tipinde bir mesaj messenger servisine geldiğinde, event manager servisi kullanılarak execution servisinde tanımlı task execution kısmına mesaj parametresi ile gönderilir. Burada görevin json mesajı bir nesneye dönüştürülür ve veritabanına kaydedilir. Bu sırada görevi çalıştıracak eklentinin yüklü olup olmadığı kontrol edilir. Eğer yüklü değil ise Lider'e ilgili eklentinin eksik olduğuna dair bir mesaj gönderilir ve eklenti kurulana kadar görev saklanır. Eklenti ile ilgili kurulum bilgileri geldiğinde eklenti paketi uzaktan alınıp kurulur ve Ahenk servisine yüklenir. Saklanan görev aktif hale getirilir. Bu bir zamanlı görev ise scheduler servisine gönderilir; değilse plugin manager servisine gönderilerek çalıştırılır.
 
 ##Kullanıcının Oturum Açması
 
