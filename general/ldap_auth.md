@@ -4,7 +4,7 @@ Pardus-GK yüklü bilgisayarlardan (istemci), LDAP sunucusu üzerinden kimlik do
 LDAP sunucusunun önceden kurulu ve çalışır durumda olduğu varsayılmıştır.
 
 1. Gerekli bağımlılıkları `sudo apt-get install -y libnss-ldapd libpam-ldapd ldap-utils` komutuyla yükleyin.
-    1. Kurulum esnasında sorulan LDAP sunucu adresini girin ("ldap://im.agem.com.tr" gibi)
+    1. Kurulum esnasında sorulan LDAP sunucu adresini girin ("ldap://ldap.agem.com.tr" gibi)
     2. LDAP sunucusu arama tabanını girin ("dc=agem,dc=com,dc=tr" gibi)
     3. Yapılandırılacak ad hizmetleri listesinden (en azından) _group_, _passwd_ ve _shadow_ seçeneklerini işaretleyin.
 
