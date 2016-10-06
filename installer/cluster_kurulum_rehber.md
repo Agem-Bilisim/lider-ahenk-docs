@@ -16,3 +16,6 @@
 
 ######NOT: Yük dengeleyici olarak çalışacak olan makineler çok ağır işlemler yapmayacağından, daha düşük özellikli seçilebilir.
 
+##### İşletim Sistemi:
+######Sistem Debian versiyon 8.0 Jessie dağıtımı ve üzerinde test edilmiştir, farklı dağıtımlar önerilmez.
+
