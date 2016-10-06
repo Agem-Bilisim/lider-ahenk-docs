@@ -77,10 +77,18 @@
 
 ###### Sayfanın üst bölümünde MariaDB cluster'ıyla ilgili girilmesi gereken genel bilgiler, aşağıda ise sadece cluster düğümlerine ait girilmesi gereken bilgiler yer almaktadır.
 ###### Cluster genel bilgilerinin açıklamaları:
-- ***MariaDB Küme Adı*** : MariaDB cluster'ına vermek istediğiniz isim.
-- ###### *MariaDB Root Parolası* : MariaDB veritabanı kurulurken belirlenecek olan root parolası
-- ###### *SSH Port* : MariaDB kurulurken makinelere bağlanmak için kullanılacak SSH bağlantısının port'u
-- ###### *SST Kullanıcı Adı* : State Snapshot Transfer kullanıcısı için kullanıcı adı
-- ###### *SST Kullanıcı Adı* : State Snapshot Transfer kullanıcısı için şifre
-- ###### *Özel anahtar kullan* : Eğer makinelere kullanıcı adı/şifre ikilisiyle değil özel anahtarla bağlanılacaksa işaretlenir ve "Özel Anahtar Yükle" butonuna basarak anahtar dosyası seçilir.
-- ###### *Passphrase* : Seçilen anahtarda passphrase varsa girilmelidir.
+###### - *MariaDB Küme Adı* : MariaDB cluster'ına vermek istediğiniz isim.
+###### - *MariaDB Root Parolası* : MariaDB veritabanı kurulurken belirlenecek olan root parolası
+###### - *SSH Port* : MariaDB kurulurken makinelere bağlanmak için kullanılacak SSH bağlantısının port'u
+###### - *SST Kullanıcı Adı* : State Snapshot Transfer kullanıcısı için kullanıcı adı
+###### - *SST Kullanıcı Adı* : State Snapshot Transfer kullanıcısı için şifre
+###### - *Özel anahtar kullan* : Eğer makinelere kullanıcı adı/şifre ikilisiyle değil özel anahtarla bağlanılacaksa işaretlenir ve "Özel Anahtar Yükle" butonuna basarak anahtar dosyası seçilir.
+###### - *Passphrase* : Seçilen anahtarda passphrase varsa girilmelidir.
+###### Düğüm bilgilerinin açıklamaları:
+###### - *Düğüm IP'si* : Kurulum yapılacak düğümün adresi.
+###### - *Düğüm Adı* : Konfigürasyonda düğüme verilecek isim
+###### - *Düğüm Kullanıcı Adı* : Düğüme bağlanırken kullanılacak kullanıcı adı
+###### - *Düğüm Kullanıcı Parolası* : Düğüme bağlanırken kullanılacak kullanıcı parolası
+###### - *Düğüm Var* : Eğer bu adres daha önceden kurulum uygulamasıyla kurulmuş çalışan bir MariaDB düğümüyse işaretlenir. (Varolan cluster'a düğüm eklenirken kullanılır)
+
+###### NOT: Artı şeklindeki butonla düğüm sayısı arttırılabilir.
