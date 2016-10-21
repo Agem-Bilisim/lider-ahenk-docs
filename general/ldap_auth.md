@@ -3,6 +3,8 @@
 Pardus-GK yüklü bilgisayarlardan (istemci), LDAP sunucusu üzerinden kimlik doğrulamanın sağlanması için gerekli adımlar aşağıdaki gibidir.
 LDAP sunucusunun önceden kurulu ve çalışır durumda olduğu varsayılmıştır.
 
+> **Uyarı**: LDAP üzerinden doğrulama yapılacak kullanıcıların LDAP ögelerinde 'posixAccount' ve 'shadowAccount' özniteliklerinin bulunması gerekmektedir.
+
 1. Gerekli bağımlılıkları `sudo apt-get install -y libnss-ldapd libpam-ldapd ldap-utils` komutuyla yükleyin.
     1. Kurulum esnasında sorulan LDAP sunucu adresini girin ("ldap://ldap.agem.com.tr" gibi)
     2. LDAP sunucusu arama tabanını girin ("dc=agem,dc=com,dc=tr" gibi)
